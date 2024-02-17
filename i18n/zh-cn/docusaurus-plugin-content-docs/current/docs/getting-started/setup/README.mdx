@@ -1,0 +1,108 @@
+---
+sidebar_position: 2
+---
+
+import DocCardList from '@theme/DocCardList'
+import { useCurrentSidebarCategory } from '@docusaurus/theme-common'
+import { CreateTauriApp } from '@theme/Command'
+
+# 快速开始
+
+
+
+## 安装和运行
+有两种方式来安装xiu：
+ 
+ - 直接用cargo来安装
+ - 源码编译安装
+
+
+### 用cargo命令安装
+
+执行下面的命令来安装xiu:
+```shell
+cargo install xiu
+```
+    
+执行下面的命令来查看帮助信息:
+```shell
+xiu -h
+```
+
+打印如下信息：
+
+    A secure and easy to use live media server, hope you love it!!!
+    
+    Usage: xiu [OPTIONS] 
+    
+    Options:
+       -c, --config <path>   Specify the xiu server configuration file path.
+       -r, --rtmp <port>     Specify the RTMP listening port(e.g.:1935).
+       -t, --rtsp <port>     Specify the rtsp listening port.(e.g.:554).
+       -w, --webrtc <port>   Specify the whip/whep listening port.(e.g.:8900).
+       -f, --httpflv <port>  Specify the HTTP-FLV listening port(e.g.:8080).
+       -s, --hls <port>      Specify the HLS listening port(e.g.:8081).
+       -l, --log <level>     Specify the log level. [possible values: trace, debug, info, warn, error, debug]
+       -h, --help            Print help
+       -V, --version         Print version
+
+    
+### 源码编译安装
+
+#### 克隆 Xiu
+```shell
+git clone https://github.com/harlanc/xiu.git
+```
+ Checkout最新发布的版本代码：
+
+```shell 
+git checkout tags/<tag_name> -b <branch_name>
+```
+    
+#### 编译
+
+目前master分支代码默认使用本地引用的工程文件，可以直接编译：
+```shell
+make build
+```
+或者
+```shell
+cargo build
+```
+
+:::note
+
+为了编译方便，把cargo相关的编译命令封装到了makeflie中，同时把本地引用的工程文件和线上的工程文件做了备份。
+
+使用下面的命令应用本地工程文件：
+```shell
+make local && make build
+```
+
+:::
+
+### 运行
+
+```shell
+cd ./xiu/target/release or ./xiu/target/debug
+./xiu -h
+```
+
+## 发布
+
+
+发布新版本crate库的时候，需要对版本号进行更新，可以先编辑online文件夹下工程文件的版本号，然后执行如下命令应用最新工程文件：
+
+```shell
+make online 
+```
+然后按照crates依赖顺序进行发布，比如：先发布xflv库
+
+```shell
+cd ./github/xiu/library/container/flv
+cargo publish
+```
+
+[HTML/CSS/JavaScript]: ./html-css-js.mdx
+[贡献守则]: https://github.com/tauri-apps/tauri/blob/dev/.github/CONTRIBUTING.md
+[`create-tauri-app`]: https://github.com/tauri-apps/create-tauri-app

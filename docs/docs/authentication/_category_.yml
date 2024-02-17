@@ -1,0 +1,4 @@
+label: 'Authentication'
+position: 5
+customProps:
+  description: Authentication algorithms introduction

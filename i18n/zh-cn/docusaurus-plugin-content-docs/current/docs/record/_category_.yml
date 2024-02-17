@@ -1,0 +1,4 @@
+label: '录制'
+position: 8
+customProps:
+  description: 录制
