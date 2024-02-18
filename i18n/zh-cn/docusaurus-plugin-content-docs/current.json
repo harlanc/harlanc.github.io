@@ -1,6 +1,6 @@
 {
   "version.label": {
-    "message": "v1",
+    "message": "v0.10.0",
     "description": "The label for version current"
   },
   "sidebar.docs.category.Docs": {
@@ -54,17 +54,5 @@
   "sidebar.blog.category.Blog": {
     "message": "博客",
     "description": "The label for category References in sidebar references"
-  },
-  "sidebar.blog.category.Tauri Architecture": {
-    "message": "Tauri 架构",
-    "description": "The label for category Tauri Architecture in sidebar references"
-  },
-  "sidebar.blog.category.Inter-Process Communication": {
-    "message": "进程间通信",
-    "description": "The label for category Inter-Process Communication in sidebar references"
-  },
-  "sidebar.blog.category.Recipes": {
-    "message": "配方",
-    "description": "The label for category Recipes in sidebar references"
   }
 }

@@ -1,6 +1,6 @@
 import DocCardList from '@theme/DocCardList';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-# 开始
+# Getting-Started
 
 <DocCardList items={useCurrentSidebarCategory().items}/>

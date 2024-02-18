@@ -2,7 +2,7 @@ const path = require('path')
 const fs = require('fs')
 
 // Change this value to update what the un-versioned docs url should be
-const unreleasedTauriVersion = 'v1'
+const unreleasedTauriVersion = 'v0.10.0'
 var lastestReleasedVersion
 
 // Checks if Docusaurus has been versioned before and sets versions accordingly
@@ -15,8 +15,6 @@ try {
 }
 
 const repoUrl = 'https://github.com/harlanc/xiu'
-const discordUrl = 'https://discord.com/invite/tauri'
-const awesomeTauriUrl = 'https://github.com/tauri-apps/awesome-tauri'
 
 const navbarItems = [
   {
@@ -24,109 +22,13 @@ const navbarItems = [
     type: 'docSidebar',
     sidebarId: 'docs',
   },
-  // {
-  //   label: 'API',
-  //   items: [
-  //     {
-  //       type: 'doc',
-  //       docId: 'api/config',
-  //       label: 'Configuration',
-  //     },
-  //     {
-  //       type: 'doc',
-  //       docId: 'api/cli',
-  //       label: 'CLI',
-  //     },
-  //     {
-  //       type: 'doc',
-  //       docId: 'api/js/README',
-  //       label: 'JavaScript / TypeScript',
-  //     },
-  //     {
-  //       label: 'Rust (via Docs.rs)',
-  //       href: 'https://docs.rs/tauri/1/',
-  //       target: '_self',
-  //     },
-  //   ],
-  // },
+  
   {
     label: 'Blog',
     type: 'docSidebar',
     sidebarId: 'blog',
   },
 
-  // {
-  //   label: 'Blog',
-  //   href: 'https://beta.tauri.app/blog',
-  //   position: 'left',
-  // },
-  // {
-  //   label: 'Community',
-  //   position: 'left',
-  //   items: [
-  //     {
-  //       label: 'Get Involved',
-  //       href: 'https://github.com/tauri-apps/tauri/blob/dev/.github/CONTRIBUTING.md',
-  //       target: '_self',
-  //     },
-  //     {
-  //       label: 'Sponsors',
-  //       to: '/#sponsors',
-  //       activeBasePath: 'never-active',
-  //     },
-  //     {
-  //       label: 'Discord',
-  //       href: discordUrl,
-  //       target: '_self',
-  //     },
-  //     {
-  //       label: 'Awesome Tauri',
-  //       href: awesomeTauriUrl,
-  //       target: '_self',
-  //     },
-  //   ],
-  // },
-  // {
-  //   label: 'About',
-  //   to: 'about/intro',
-
-  //   items: [
-  //     {
-  //       label: 'What is Tauri?',
-  //       to: 'about/intro',
-  //     },
-  //     {
-  //       label: 'Governance',
-  //       to: 'about/governance',
-  //     },
-  //     {
-  //       label: 'Trademark Guidelines',
-  //       to: 'about/trademark',
-  //     },
-  //     {
-  //       label: 'Tauri Book',
-  //       to: 'about/book',
-  //     },
-  //   ],
-  // },
-  {
-    label: 'Release Notes',
-    to: 'releases',
-    position: 'right',
-  },
-  {
-    type: 'docsVersionDropdown',
-    position: 'right',
-    className: 'navbarIcon versionIcon',
-    dropdownItemsAfter: [
-      {
-        href: 'https://beta.tauri.app/',
-        label: 'v2 (Alpha)',
-        target: '_self',
-      },
-    ],
-    dropdownActiveClassDisabled: true,
-  },
   {
     href: repoUrl,
     'aria-label': 'GitHub',
@@ -173,27 +75,27 @@ const footerLinks = [
       // },
     ],
   },
-  // {
-  //   title: 'Contact',
-  //   items: [
-  //     {
-  //       label: 'Mail',
-  //       href: 'mailto:contact@tauri.app',
-  //       target: '_self',
-  //     },
-  //     {
-  //       label: 'Twitter',
-  //       href: 'https://twitter.com/TauriApps',
-  //       target: '_self',
-  //     },
-  //     {
-  //       label: 'Mastodon',
-  //       href: 'https://fosstodon.org/@TauriApps',
-  //       rel: 'me',
-  //       target: '_self',
-  //     },
-  //   ],
-  // },
+  {
+    title: 'Contact',
+    items: [
+      {
+        label: 'Mail',
+        href: 'mailto:contact@tauri.app',
+        target: '_self',
+      },
+      {
+        label: 'Twitter',
+        href: 'https://twitter.com/TauriApps',
+        target: '_self',
+      },
+      {
+        label: 'Mastodon',
+        href: 'https://fosstodon.org/@TauriApps',
+        rel: 'me',
+        target: '_self',
+      },
+    ],
+  },
   {
     title: 'Network',
     items: [
@@ -216,20 +118,11 @@ const footerLinks = [
   {
     title: 'Community',
     items: [
-      // {
-      //   label: 'Sponsors',
-      //   to: '/#sponsors',
-      // },
       {
         label: 'Discord',
         href: 'https://discord.gg/gS5wBRtpcB',
         target: '_self',
       },
-      // {
-      //   label: 'Awesome Tauri',
-      //   href: awesomeTauriUrl,
-      //   target: '_self',
-      // },
     ],
   },
 ]
@@ -247,7 +140,7 @@ async function siteConfig() {
     url: 'https://github.com',
     i18n: {
       defaultLocale: 'en',
-      locales: ['en', 'fr', 'ko', 'zh-cn', 'it'],
+      locales: ['en', 'zh-cn',],
     },
     themeConfig: {
       prism: {
@@ -281,6 +174,12 @@ async function siteConfig() {
         links: footerLinks,
         copyright: `Copyright © 2020 - ${new Date().getFullYear()} XIU. CC-BY / MIT`,
       },
+      algolia: {
+        apiKey: '3534e2d1d881a10081025373d8f2375c',
+        indexName: 'dev-blog',
+        appId: '2KDKKFPT4A',
+        placeholder: 'Search...'
+      },
     },
 
     presets: [
@@ -302,7 +201,7 @@ async function siteConfig() {
                 const mod = docPath.split('/').at(-1).split('.')[0]
                 return `https://github.com/tauri-apps/tauri/edit/dev/tooling/api/src/${mod}.ts`
               } else {
-                return `https://github.com/tauri-apps/tauri-docs/edit/dev/${versionDocsDirPath}/${docPath}`
+                return `https://github.com/harlanc/xiu-doc/edit/dev/${versionDocsDirPath}/${docPath}`
               }
             },
             sidebarCollapsible: true,

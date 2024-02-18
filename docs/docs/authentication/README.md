@@ -1,6 +1,6 @@
 import DocCardList from '@theme/DocCardList';
 import {useCurrentSidebarCategory} from '@docusaurus/theme-common';
 
-# 鉴权
+# Authentication
 
 <DocCardList items={useCurrentSidebarCategory().items}/>
