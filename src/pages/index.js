@@ -540,7 +540,7 @@ export default function App() {
 
           <Link
             className={classNames('button button--secondary button--lg')}
-            to={latestVersion.path + '/guides/getting-started/setup'}
+            to={latestVersion.path + '/docs/getting-started/setup'}
           >
             <Translate>Quick Start</Translate>
           </Link>

@@ -133,11 +133,11 @@ async function siteConfig() {
     title: 'XIU',
     tagline:
       'Building a Stable, Secure, and Efficient Live Streaming Media Service',
-    organizationName: 'Xiu',
-    projectName: 'Xiu',
+    organizationName: 'harlanc',
+    projectName: 'harlanc.github.io',
     baseUrl: '/',
     favicon: '/meta/xiu.png',
-    url: 'https://github.com',
+    url: 'https://harlanc.github.io/',
     i18n: {
       defaultLocale: 'en',
       locales: ['en', 'zh-cn',],

@@ -16,7 +16,7 @@ xiu支持把推拉流事件以HTTP回调的方式告知其它服务，可以用�
 xiu/target/debug/http-server
 ```
 
-在xiu的配置文件中写上此测试HTTP-Server的地址：[配置](../development/config-file#http-通知)。xiu在收到推拉流请求后，会调用此HTTP-Server的接口，把事件的相关信息写在HTTP Body中告知HTTP-server
+在xiu的配置文件中写上此测试HTTP-Server的地址：[配置](../configurations/config-file#http-通知)。xiu在收到推拉流请求后，会调用此HTTP-Server的接口，把事件的相关信息写在HTTP Body中告知HTTP-server
 
 
 ## Http-Callback的Body格式
