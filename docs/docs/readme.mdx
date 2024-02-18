@@ -3,10 +3,32 @@ import { useCurrentSidebarCategory } from '@docusaurus/theme-common'
 
 # Docs
 
-Tauri is an app construction toolkit that lets you build software for all major desktop operating systems using web technologies.
+Xiu is a live streaming media framework in pure Rust. Its goal is to make it easy and quick for developers to build live streaming media services.
 
-Whether you're new to Tauri development, want to integrate Tauri into an existing project, are ready to get your app into the hands of users, or want to learn how to use a common Tauri feature, we have the help for you.
+It supports popular streaming media protocols such as RTMP/HTTP-FLV/HLS out of the box and can also easily extend to other protocols for on-demand development.
 
-If you can't find what you're looking for or have a suggestion to improve our guides, reach out to our community on [Discord](https://discord.com/invite/tauri).
+Currently supported features include:
+
+## Features
+- [x] Support multiple platforms(Linux/MacOS/Windows).
+- [x] Support RTMP.
+   - [x] Support publishing or subscribing H.264/AAC streams.
+   - [x] Support GOP cache which can be configured in the configuration file.
+   - [x] Support protocol conversion from RTMP to HTTP-FLV/HLS.
+   - [x] Support cluster.
+- [x] Support RTSP.
+  - [x] Support publishing or subscribing H.265/H.264/AAC stream over both TCP(Interleaved) and UDP.
+  - [x] Support protocol conversion from RTSP to RTMP/HLS/HTTP-FLV.
+- [x] Support WebRTC(Whip/Whep).
+  - [x] Support publishing rtc stream using Whip.
+  - [x] Support subscribing rtc stream using Whep.
+  - [x] Support protocol conversion from WHIP to RTMP/HLS/HTTP-FLV.
+- [x] Support HTTP-FLV/HLS protocols(Transferred from RTMP/RTSP).
+- [x] Support configuring the service using command line or a configuration file.
+- [x] Support HTTP API/Notifications.
+  - [x] Support querying stream information.
+  - [x] Support notification of stream status.
+- [x] Support token authentications.
+- [x] Support recording live streams into HLS files(m3u8+ts).
 
 <DocCardList items={useCurrentSidebarCategory().items} />
