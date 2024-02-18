@@ -8,7 +8,7 @@ import Command from '@theme/Command'
 
 ## OBS Push
 
-![Push WHIP](/img/guides/distribution/webrtc/obs_whip_push_en.png)
+![Push WHIP](/img/docs/scenarios/webrtc/obs_whip_push_en.png)
 
 
 The push URL is 
@@ -32,7 +32,7 @@ You can play this live stream on the web using the WHEP protocol by following th
  - Copy the files under xiu/protocol/webrtc/src/clients/ folder to the same level directory of the binary file xiu.
  - Open the address http://localhost:8900 in your browser (the port number is the listening port for the WebRTC protocol), and the following web page will appear:
 
-![Play Whep](/img/guides/distribution/webrtc/play_whep.png)
+![Play Whep](/img/docs/scenarios/webrtc/play_whep.png)
 
 Fill in the correct app name/stream name/token to play.
 

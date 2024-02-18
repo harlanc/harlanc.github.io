@@ -21,7 +21,7 @@ ffmpeg -re -stream_loop -1 -i test.mp4 -c:a copy -c:v copy -f flv -flvflags no_d
 
 
 
-![Add Run/Debug Configuration](/img/guides/distribution/rtmp/obs_rtmp_push_en.png)
+![Add Run/Debug Configuration](/img/docs/scenarios/rtmp/obs_rtmp_push_en.png)
 
 :::caution
 

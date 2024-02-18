@@ -51,17 +51,15 @@ const navbarItems = [
 
 const footerLinks = [
   {
-    title: 'Repositories',
+    title: 'Learning',
     items: [
-      // {
-      //   label: 'Docs',
-      //   type: 'docSidebar',
-      //   sidebarId: 'guides',
-      // }
       {
-        label: 'XIU',
-        href: repoUrl,
-        target: '_self',
+        label: 'Docs',
+        to: 'v0.10.0/docs',
+      },
+      {
+        label: 'Blog',
+        to: 'v0.10.0/blog',
       },
       // {
       //   label: 'TAO',
@@ -80,20 +78,10 @@ const footerLinks = [
     items: [
       {
         label: 'Mail',
-        href: 'mailto:contact@tauri.app',
+        href: 'mailto:harlanc@foxmail.com',
         target: '_self',
       },
-      {
-        label: 'Twitter',
-        href: 'https://twitter.com/TauriApps',
-        target: '_self',
-      },
-      {
-        label: 'Mastodon',
-        href: 'https://fosstodon.org/@TauriApps',
-        rel: 'me',
-        target: '_self',
-      },
+
     ],
   },
   {

@@ -1,6 +1,6 @@
 {
-  "link.title.Repositories": {
-    "message": "仓库",
+  "link.title.Learning": {
+    "message": "学习",
     "description": "The title of the footer links column with title=Repositories in the footer"
   },
   "link.title.Contact": {
