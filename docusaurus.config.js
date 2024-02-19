@@ -163,9 +163,9 @@ async function siteConfig() {
         copyright: `Copyright © 2020 - ${new Date().getFullYear()} XIU. CC-BY / MIT`,
       },
       algolia: {
-        apiKey: '3534e2d1d881a10081025373d8f2375c',
-        indexName: 'dev-blog',
-        appId: '2KDKKFPT4A',
+        apiKey: '56e45b617c6be4d5f106686843d55980',
+        indexName: 'harlancio',
+        appId: '0TA4S52VKE',
         placeholder: 'Search...'
       },
     },
