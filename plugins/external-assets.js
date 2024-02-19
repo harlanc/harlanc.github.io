@@ -21,7 +21,7 @@ module.exports = (context, options) => ({
           tagName: 'meta',
           attributes: {
             property: 'og:image',
-            content: context.siteConfig.url + '/img/social.png',
+            content: context.siteConfig.url + '/img/xiu.png',
           },
         },
         {
@@ -35,7 +35,7 @@ module.exports = (context, options) => ({
           tagName: 'meta',
           attributes: {
             property: 'twitter:image',
-            content: context.siteConfig.url + '/img/social.png',
+            content: context.siteConfig.url + '/img/xiu.png',
           },
         },
       ],
