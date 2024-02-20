@@ -47,14 +47,8 @@
   "Self Updater": {
     "message": "自动更新"
   },
-  "Update Tauri Apps from within themselves": {
-    "message": "Tauri 应用可以自己更新"
-  },
   "Core Plugin System": {
     "message": "插件系统"
-  },
-  "Build reusable plugins to extend Tauri core": {
-    "message": "构建可复用的插件以扩展 Tauri 核心"
   },
   "Scoped Filesystem": {
     "message": "受限的文件系统"
@@ -70,9 +64,6 @@
   },
   "GitHub Action": {
     "message": "GitHub Action"
-  },
-  "Build your Tauri binary for macOS, Linux, and Windows": {
-    "message": "为 macOS、Linux 和 Windows 构建 Tauri 二进制文件"
   },
   "Native Notifications": {
     "message": "原生系统通知"
@@ -127,9 +118,6 @@
   },
   "Send messages through a channel": {
     "message": "通过频道发送消息"
-  },
-  "Tauri is a framework for building tiny, blazing fast binaries for all major desktop platforms. Developers can integrate any front-end framework that compiles to HTML, JS and CSS for building their user interface.": {
-    "message": "Tauri 是一个可用于为所有主要桌面平台构建微小的、极速的二进制文件的框架，开发人员使用任何可编译为前端代码的框架来构建他们的用户界面。"
   },
   "Announcing the release of": {
     "message": "宣布发布"

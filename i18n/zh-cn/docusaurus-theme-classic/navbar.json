@@ -1,8 +1,4 @@
 {
-  "logo.alt": {
-    "message": "Tauri Logo",
-    "description": "The alt text of navbar logo"
-  },
   "item.label.Docs": {
     "message": "文档",
     "description": "Navbar item with label Guides"
@@ -63,14 +59,6 @@
     "message": "Discord",
     "description": "Navbar item with label Discord"
   },
-  "item.label.Awesome Tauri": {
-    "message": "Awesome Tauri",
-    "description": "Navbar item with label Awesome Tauri"
-  },
-  "item.label.What is Tauri?": {
-    "message": "Tauri 是什么？",
-    "description": "Navbar item with label What is Tauri?"
-  },
   "item.label.Governance": {
     "message": "管理",
     "description": "Navbar item with label Governance"
@@ -78,9 +66,5 @@
   "item.label.Trademark Guidelines": {
     "message": "商标准则",
     "description": "Navbar item with label Trademark Guidelines"
-  },
-  "item.label.Tauri Book": {
-    "message": "Tauri Book",
-    "description": "Navbar item with label Tauri Book"
   }
 }
