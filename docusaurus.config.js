@@ -61,16 +61,6 @@ const footerLinks = [
         label: 'Blog',
         to: 'v0.10.0/blog',
       },
-      // {
-      //   label: 'TAO',
-      //   href: 'https://github.com/tauri-apps/tao',
-      //   target: '_self',
-      // },
-      // {
-      //   label: 'WRY',
-      //   href: 'https://github.com/tauri-apps/wry',
-      //   target: '_self',
-      // },
     ],
   },
   {
@@ -87,15 +77,6 @@ const footerLinks = [
   {
     title: 'Network',
     items: [
-      // {
-      //   label: 'Blog',
-      //   href: 'https://beta.tauri.app/blog',
-      // },
-      // {
-      //   label: 'OpenCollective',
-      //   href: 'https://opencollective.com/tauri',
-      //   target: '_self',
-      // },
       {
         label: 'GitHub',
         href: 'https://github.com/harlanc/xiu',
@@ -125,7 +106,7 @@ async function siteConfig() {
     projectName: 'harlanc.github.io',
     baseUrl: '/',
     favicon: '/meta/xiu.png',
-    url: 'https://harlanc.github.io/',
+    url: 'https://rustxiu.com/',
     i18n: {
       defaultLocale: 'en',
       locales: ['en', 'zh-cn',],
