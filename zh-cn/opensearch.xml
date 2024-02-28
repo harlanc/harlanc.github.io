@@ -4,8 +4,8 @@
   <ShortName>XIU</ShortName>
   <Description>Search XIU</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://harlanc.github.io/zh-cn/meta/xiu.png</Image>
-  <Url type="text/html" method="get" template="https://harlanc.github.io/zh-cn/search?q={searchTerms}"/>
-  <Url type="application/opensearchdescription+xml" rel="self" template="https://harlanc.github.io/zh-cn/opensearch.xml" />
-  <moz:SearchForm>https://harlanc.github.io/zh-cn/</moz:SearchForm>
+  <Image width="16" height="16" type="image/x-icon">https://rustxiu.com/zh-cn/meta/xiu.png</Image>
+  <Url type="text/html" method="get" template="https://rustxiu.com/zh-cn/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://rustxiu.com/zh-cn/opensearch.xml" />
+  <moz:SearchForm>https://rustxiu.com/zh-cn/</moz:SearchForm>
 </OpenSearchDescription>
