@@ -2,7 +2,7 @@ const path = require('path')
 const fs = require('fs')
 
 // Change this value to update what the un-versioned docs url should be
-const unreleasedTauriVersion = 'v0.10.0'
+const unreleasedTauriVersion = 'v0.12.4'
 var lastestReleasedVersion
 
 // Checks if Docusaurus has been versioned before and sets versions accordingly
@@ -55,11 +55,11 @@ const footerLinks = [
     items: [
       {
         label: 'Docs',
-        to: 'v0.10.0/docs',
+        to: 'v0.12.4/docs',
       },
       {
         label: 'Blog',
-        to: 'v0.10.0/blog',
+        to: 'v0.12.4/blog',
       },
     ],
   },
@@ -124,7 +124,7 @@ async function siteConfig() {
       },
       announcementBar: {
         content:
-          "<b>🚀 The <a id='announcement-link' href='https://github.com/harlanc/xiu/releases/tag/v0.10.0'>XIU v0.10.0</a> has launched!</b>",
+          "<b>🚀 The <a id='announcement-link' href='https://github.com/harlanc/xiu/releases/tag/v0.12.4'>XIU v0.12.4</a> has launched!</b>",
         backgroundColor: 'var(--ifm-color-primary)',
         textColor: 'var(--ifm-button-color)',
       },

@@ -11,12 +11,48 @@ import { CreateTauriApp } from '@theme/Command'
 
 
 ## Install and Run
-There are two ways to install xiu:
+There are several ways to install xiu:
  
-
- - Install directly with cargo
+ - Using binary files directly
+ - Install with Docker image
+ - Install with cargo
  - Build from source
 
+
+### Using binary files directly
+
+Xiu compiles and generates binary files for common platforms in each release, which are placed on the GitHub release page. These files can be run directly on the corresponding platforms. Download Link: [v0.12.4](https://github.com/harlanc/xiu/releases/tag/v0.12.4).
+
+### Install with Docker image
+
+For each release, xiu also builds Docker images for common platforms, and the download links: [Docker Image Download](https://hub.docker.com/repository/docker/harlancn/xiu/tags?page=1&ordering=last_updated).
+
+Use the follow command to pull the docker image and run ：
+
+```shell
+docker run -d -it --net=host --name xiu --privileged=true  harlancn/xiu:latest /app/start.sh /app/config.toml 
+```
+
+After the service starts, log files will be saved to the following directory defaultly:
+
+    /app/logs
+
+You can mount this folder to the host machine for easier viewing logs. If you need , use the following command (replace $your_own_local_full_path with your own directory):
+
+```shell
+docker run -d -it --net=host --name xiu --privileged=true -v $your_own_local_full_path:/app/logs  harlancn/xiu:latest /app/start.sh /app/config.toml 
+```
+
+And if you need to modify the configurations, enter the Docker container, edit config.toml, and restart Docker for the changes to take effect. To enter the Docker container:
+
+```shell
+docker exec -it xiu bash
+```
+
+Use the following command to restart Docker :
+```shell
+docker restart xiu
+```
 
 ### Install with cargo 
 
@@ -83,25 +119,10 @@ make local && make build
 
 :::
 
-### Run
+#### Run
 
 ```shell
 cd ./xiu/target/release or ./xiu/target/debug
 ./xiu -h
-```
-
-## Publish
-
-
-When releasing a new version of the crate library, you need to update the version number. You can first edit the version number of the project file in the online folder, and then execute the following command to apply the latest project file:
-
-```shell
-make online 
-```
-Then publish according to the crates dependency order, for example: publish the xflv library first
-
-```shell
-cd ./github/xiu/library/container/flv
-cargo publish
 ```
 

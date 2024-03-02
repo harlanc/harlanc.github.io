@@ -11,11 +11,45 @@ import { CreateTauriApp } from '@theme/Command'
 
 
 ## 安装和运行
-有两种方式来安装xiu：
- 
+有以下几种方式来安装xiu：
+ - 直接使用可执行文件
+ - 使用Docker image
  - 直接用cargo来安装
  - 源码编译安装
 
+### 直接使用可执行文件
+
+xiu每次发布会编译生成常见平台的可执行文件，可以直接运行在对应的平台上，链接在github发布页面，下载链接：[v0.12.4](https://github.com/harlanc/xiu/releases/tag/v0.12.4).
+
+### Docker Image
+
+xiu每次发布会制作常见平台的Docker镜像，下载链接：[Docker Image Download](https://hub.docker.com/repository/docker/harlancn/xiu/tags?page=1&ordering=last_updated)
+
+使用如下命令拉取镜像包和运行：
+
+```shell
+docker run -d -it --net=host --name xiu --privileged=true  harlancn/xiu:latest /app/start.sh /app/config.toml 
+```
+
+服务启动会默认把日志文件打印到如下目录：
+
+    /app/logs
+可以把此文件夹挂载到宿主机上，方便查看日志，如需挂载，使用如下命令(把$your_own_local_full_path替换成你自己的目录)：
+
+```shell
+docker run -d -it --net=host --name xiu --privileged=true -v $your_own_local_full_path:/app/logs  harlancn/xiu:latest /app/start.sh /app/config.toml 
+```
+
+如果需要更改配置，进入到Docker内部，编辑config.toml并重启Docker生效，进入Docker内部：
+
+```shell
+docker exec -it xiu bash
+```
+
+重启Docker:
+```shell
+docker restart xiu
+```
 
 ### 用cargo命令安装
 
@@ -81,25 +115,10 @@ make local && make build
 
 :::
 
-### 运行
+#### 运行
 
 ```shell
 cd ./xiu/target/release or ./xiu/target/debug
 ./xiu -h
-```
-
-## 发布
-
-
-发布新版本crate库的时候，需要对版本号进行更新，可以先编辑online文件夹下工程文件的版本号，然后执行如下命令应用最新工程文件：
-
-```shell
-make online 
-```
-然后按照crates依赖顺序进行发布，比如：先发布xflv库
-
-```shell
-cd ./github/xiu/library/container/flv
-cargo publish
 ```
 
