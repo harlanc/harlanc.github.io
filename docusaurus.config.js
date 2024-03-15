@@ -2,7 +2,7 @@ const path = require('path')
 const fs = require('fs')
 
 // Change this value to update what the un-versioned docs url should be
-const unreleasedTauriVersion = 'v0.12.4'
+const unreleasedTauriVersion = ''
 var lastestReleasedVersion
 
 // Checks if Docusaurus has been versioned before and sets versions accordingly
@@ -55,11 +55,11 @@ const footerLinks = [
     items: [
       {
         label: 'Docs',
-        to: 'v0.12.4/docs',
+        to: 'docs',
       },
       {
         label: 'Blog',
-        to: 'v0.12.4/blog',
+        to: 'blog',
       },
     ],
   },
@@ -163,23 +163,23 @@ async function siteConfig() {
             showLastUpdateTime: true,
             editUrl: ({ docPath, versionDocsDirPath }) => {
               if (docPath === 'api/cli.md') {
-                return 'https://github.com/tauri-apps/tauri/tree/dev/tooling/cli/src'
+                return 'https://github.com/harlanc/xiu-doc/tree/main/tooling/cli/src'
               } else if (docPath === 'api/config.md') {
-                return 'https://github.com/tauri-apps/tauri/edit/dev/core/tauri-utils/src/config.rs'
+                return 'https://github.com/harlanc/xiu-doc/edit/main/core/tauri-utils/src/config.rs'
               } else if (docPath.startsWith('api/js')) {
                 const mod = docPath.split('/').at(-1).split('.')[0]
-                return `https://github.com/tauri-apps/tauri/edit/dev/tooling/api/src/${mod}.ts`
+                return `https://github.com/harlanc/xiu-doc/edit/main/tooling/api/src/${mod}.ts`
               } else {
-                return `https://github.com/harlanc/xiu-doc/edit/dev/${versionDocsDirPath}/${docPath}`
+                return `https://github.com/harlanc/xiu-doc/edit/main/${versionDocsDirPath}/${docPath}`
               }
             },
             sidebarCollapsible: true,
             versions: {
               // Maps the working "current" version to a custom url instead of `next`
-              current: {
-                label: unreleasedTauriVersion,
-                path: unreleasedTauriVersion,
-              },
+              //current: {
+              //  label: unreleasedTauriVersion,
+              //  path: unreleasedTauriVersion,
+              //},
               // If there is a "latest" version, map url to version number
               ...(lastestReleasedVersion && {
                 [lastestReleasedVersion]: {
