@@ -126,6 +126,17 @@ key = "123"
 # used for simple authentication
 password = "456"
 ```
+
+## HTTP-API
+
+```toml
+############################
+# HTTP-API configurations  #
+############################
+[httpapi]
+port = 8000 #specify the HTTP-API service listening port
+```
+
 ## HTTP Notify
 
 Notify the business users of certain events happening:

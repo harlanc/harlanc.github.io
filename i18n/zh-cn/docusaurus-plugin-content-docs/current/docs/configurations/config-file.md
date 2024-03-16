@@ -119,6 +119,17 @@ key = "123"
 # used for simple authentication
 password = "456"
 ```
+
+## HTTP-API
+
+```toml
+############################
+# HTTP-API configurations  #
+############################
+[httpapi]
+port = 8000 #指定HTTP-API服务监听端口
+```
+
 ## HTTP 通知
 
 可以使用此方式通知业务方有关流发布、拉取相关的事件：
