@@ -225,24 +225,24 @@ curl -X POST -H "Content-Type: application/json" -d '{
         {
             "publisher": {
                 "audio": {
-                    "bitrate(kbits/s)": 130,
+                    "bitrate(kbits/s)": 128,
                     "channels": 2,
                     "profile": "LC",
                     "samplerate": 44100,
                     "sound_format": "AAC"
                 },
-                "id": "17105457865882",
+                "id": "17105458011883",
                 "identifier": {
                     "rtmp": {
                         "app_name": "live",
-                        "stream_name": "source1"
+                        "stream_name": "source"
                     }
                 },
-                "recv_bitrate(kbits/s)": 1424,
-                "remote_address": "127.0.0.1:55687",
-                "start_time": "2024-03-16T07:36:26.337103+08:00",
+                "recv_bitrate(kbits/s)": 1948,
+                "remote_address": "127.0.0.1:55764",
+                "start_time": "2024-03-16T07:36:41.109177+08:00",
                 "video": {
-                    "bitrate(kbits/s)": 1424,
+                    "bitrate(kbits/s)": 1948,
                     "codec": "H264",
                     "frame_rate": 20,
                     "gop": 60,
@@ -252,12 +252,27 @@ curl -X POST -H "Content-Type: application/json" -d '{
                     "width": 720
                 }
             },
-            "subscriber_count": 0,
+            "subscriber_count": 2,
             "subscribers": {
-
+                "17105458497472": {
+                    "id": "17105458497472",
+                    "remote_address": "127.0.0.1:56450",
+                    "send_bitrate(kbits/s)": 2076,
+                    "start_time": "2024-03-16T07:37:29.034025+08:00",
+                    "sub_type": "PlayerRtmp",
+                    "total_send_bytes(kbits/s)": 74392348
+                },
+                "17105458720121": {
+                    "id": "17105458720121",
+                    "remote_address": "127.0.0.1:56583",
+                    "send_bitrate(kbits/s)": 2076,
+                    "start_time": "2024-03-16T07:37:52.999917+08:00",
+                    "sub_type": "PlayerHttpFlv",
+                    "total_send_bytes(kbits/s)": 69300006
+                }
             },
-            "total_recv_bytes": 196836665,
-            "total_send_bytes": 0
+            "total_recv_bytes": 91712283,
+            "total_send_bytes": 154540637
         }
     ]
 }
