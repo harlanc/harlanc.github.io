@@ -4,6 +4,10 @@ xiu doc official site.
 
 ## Run
 
+    yarn install 
+
+and then
+
     yarn start 
 
 or 

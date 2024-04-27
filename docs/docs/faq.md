@@ -1,6 +1,6 @@
 ---
 title: Frequently Asked Questions
-sidebar_position: 11
+sidebar_position: 9
 description: Fixes for common issues
 ---
 

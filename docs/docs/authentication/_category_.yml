@@ -1,4 +1,4 @@
 label: 'Authentication'
-position: 5
+position: 3
 customProps:
   description: Authentication algorithms introduction
