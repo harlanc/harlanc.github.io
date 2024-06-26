@@ -6,7 +6,7 @@ import Command from '@theme/Command'
 
 # 鉴权算法介绍
 
-xiu提供了一些健全算法，包括简单鉴权、MD5鉴权和用户自定义鉴权，关于鉴权的配置参考：[鉴权配置](../configurations/config-file#推拉流鉴权)
+xiu提供了一些鉴权算法，包括简单鉴权、MD5鉴权和用户自定义鉴权，关于鉴权的配置参考：[鉴权配置](../configurations/config-file#推拉流鉴权)
 
 ## 简单鉴权
 
