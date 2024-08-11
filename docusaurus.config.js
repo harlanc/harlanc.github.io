@@ -124,7 +124,7 @@ async function siteConfig() {
       },
       announcementBar: {
         content:
-          "<b>🚀 The <a id='announcement-link' href='https://github.com/harlanc/xiu/releases/tag/v0.12.5'>XIU v0.12.5</a> has launched!</b>",
+          "<b>🚀 The <a id='announcement-link' href='https://github.com/harlanc/xiu/releases/tag/v0.13.0'>XIU v0.13.0</a> has launched!</b>",
         backgroundColor: 'var(--ifm-color-primary)',
         textColor: 'var(--ifm-button-color)',
       },

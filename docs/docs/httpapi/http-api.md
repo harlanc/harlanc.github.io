@@ -415,6 +415,49 @@ The business users can kickoff illegal push/pull clients using the following int
 curl -X POST -H "Content-Type: application/json" -d '{"id": "17079922471661"}' http://localhost:8000/kick_off_client
 ```
 
+## Pull the RTSP stream from remote to xiu
+
+### Start the Job
+
+xiu can pull the RTSP stream from a remote RTSP server to the local machine, and then publish it for viewers to watch, or remux it into RTMP/HTTP-FLV/HLS.
+
+```shell
+curl -X POST -H "Content-Type: application/json" -d '{
+     "id" : "123",
+     "identifier": {
+                "rtsp": {
+                   "stream_path": "live/test"
+                }
+            },
+      "server_address":"localhost:5544",
+      "relay_type":"Pull"
+}' http://localhost:8000/api/start_relay_stream
+```
+
+- id: The ID is the task ID and must be unique, as this ID will be used to stop the task.
+- identifier: The stream identifier.
+- server_address: The address from which to pull the RTSP stream. For example, if the RTSP URL is rtsp://localhost:5544/live/test, then server_address is localhost:5544 and the stream_path in the identifier is live/test.
+- relay_type: Since this is pulling an RTSP stream, it should be set to "Pull".
+
+And the return value:
+
+```shell
+{"error_code":0,"desp":"succ","data":null}
+```
+### Stop the Job
+
+```shell
+curl -X POST -H "Content-Type: application/json" -d '{
+     "id" : "123",
+     "relay_type":"Pull"
+}' http://localhost:8000/api/stop_relay_stream
+```
+
+And the return value:
+
+```shell
+{"error_code":0,"desp":"succ","data":null}
+```
 
 
 

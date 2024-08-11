@@ -50,6 +50,7 @@ algorithm = "simple" #设置鉴权方式 支持简单鉴权和MD5鉴权(分别�
 [rtsp]
 enabled = false  #打开或者关闭RTSP媒体协议
 port = 445  #指定RTSP协议监听端口
+relay_enabled = true # 可以开启RTSP流转发
 [rtsp.auth] 
 pull_enabled = true #是否开启拉流鉴权
 push_enabled = true  #是否开启推流鉴权

@@ -50,6 +50,7 @@ algorithm = "simple" # set authentication method, support simple authentication 
 [rtsp]
 enabled = false  # enable the RTSP media protocol or not
 port = 445  # specify the RTSP protocol listening port.
+relay_enabled = true # enable the RTSP relay.
 [rtsp.auth] 
 pull_enabled = true # enable pulling stream authentication or not.
 push_enabled = true  # enable pushing stream authentication or not.

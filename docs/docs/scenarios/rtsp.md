@@ -39,3 +39,20 @@ ffplay -rtsp_transport tcp -i "rtsp://127.0.0.1:5544/live/test?token=123"
 ```shell
 ffplay -i "rtsp://127.0.0.1:5544/live/test?token=123"
 ```
+
+## Pull remote RTSP stream to XIU
+
+You can pull an RTSP stream from a remote camera to the xiu server and remux it into RTMP/HTTP-FLV/HLS, follow the following steps:
+
+### Configuration
+Make sure to enable the RTSP relay switch:
+
+[RTSP Configuration](../configurations/config-file#rtsp)
+
+To remux into RTMP/HTTP-FLV/HLS, add the relevant protocol configurations to the configuration file.
+
+### HTTP-API
+
+Use the HTTP-API to start and stop the pulling tasks: 
+
+[HTTP-API](../httpapi/http-api#pull-the-rtsp-stream-from-remote-to-xiu)

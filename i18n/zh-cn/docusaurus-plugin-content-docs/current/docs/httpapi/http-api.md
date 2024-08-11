@@ -416,7 +416,46 @@ curl -X POST -H "Content-Type: application/json" -d '{
 curl -X POST -H "Content-Type: application/json" -d '{"id": "17079922471661"}' http://localhost:8000/kick_off_client
 ```
 
+## 拉取摄像头的RTSP流到xiu
 
+### 启动拉取任务
 
+xiu可以把远端的RTSP server上的RTSP流拉取到本地，并发布，观众观看此流、或者可以转封装到RTMP/HTTP-FLV/HLS。
 
+```shell
+curl -X POST -H "Content-Type: application/json" -d '{
+     "id" : "123",
+     "identifier": {
+                "rtsp": {
+                   "stream_path": "live/test"
+                }
+            },
+      "server_address":"localhost:5544",
+      "relay_type":"Pull"
+}' http://localhost:8000/api/start_relay_stream
+```
+- id：id为任务ID，需要保证此ID唯一，因为任务停止需要使用此ID。
+-  identifier: 流标识符。
+-  server\_address：RTSP流从这个地址拉取RTSP流。例如：如果RTSP播放地址为 rtsp://localhost:5544/live/test ，则 server\_address为 localhost:5544，identifier中的stream\_path 为 live/test
+-  relay_type：因为是拉取RTSP流，所以要填写 pull
 
+返回值：
+
+```shell
+{"error_code":0,"desp":"succ","data":null}
+```
+
+### 停止拉取任务
+
+```shell
+curl -X POST -H "Content-Type: application/json" -d '{
+     "id" : "123",
+     "relay_type":"Pull"
+}' http://localhost:8000/api/stop_relay_stream
+```
+
+返回值：
+
+```shell
+{"error_code":0,"desp":"succ","data":null}
+```
