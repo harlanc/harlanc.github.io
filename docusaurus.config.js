@@ -85,6 +85,16 @@ const footerLinks = [
     ],
   },
   {
+    title: 'Reference',
+    items: [
+      {
+        label: 'YCMDs',
+        href: 'https://www.ycmds.cc',
+        target: '_self',
+      },
+    ],
+  },
+  {
     title: 'Community',
     items: [
       {

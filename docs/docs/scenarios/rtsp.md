@@ -24,6 +24,11 @@ ffmpeg -re -stream_loop -1  -i test.mp4 -c:v copy  -c:a copy  -rtsp_transport tc
 ffmpeg -re -stream_loop -1  -i test.mp4 -c:v copy  -c:a copy -f rtsp "rtsp://127.0.0.1:5544/live/test?token=123"
 ```
 
+:::info 
+
+Reference：[Transfer RTSP Stream](https://www.ycmds.cc/en/ffmpeg/ffmpeg/#3transfer-rtsp-stream)
+
+:::
 
 ## Play
 
@@ -39,6 +44,12 @@ ffplay -rtsp_transport tcp -i "rtsp://127.0.0.1:5544/live/test?token=123"
 ```shell
 ffplay -i "rtsp://127.0.0.1:5544/live/test?token=123"
 ```
+
+:::info 
+
+Reference：[Play RTSP Stream](https://www.ycmds.cc/en/ffmpeg/ffplay/#play-rtsp-stream)
+
+:::
 
 ## Pull remote RTSP stream to XIU
 

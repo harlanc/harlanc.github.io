@@ -51,6 +51,12 @@ docker exec -it xiu bash
 docker restart xiu
 ```
 
+:::info 
+
+Docker相关命令，参考：[Docker基本命令](https://www.ycmds.cc/docker/#1%E5%9F%BA%E6%9C%AC%E5%91%BD%E4%BB%A4)
+
+:::
+
 ### 用cargo命令安装
 
 执行下面的命令来安装xiu:

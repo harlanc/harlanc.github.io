@@ -18,6 +18,12 @@ import Command from '@theme/Command'
 ffmpeg -re -stream_loop -1 -i test.mp4 -c:a copy -c:v copy -f flv -flvflags no_duration_filesize rtmp://127.0.0.1:1935/live/test
 ```
 
+:::info 
+
+查看命令详细解释，参考：[转推RTMP协议流](https://www.ycmds.cc/ffmpeg/ffmpeg/#1%E8%BD%AC%E6%8E%A8rtmp%E5%8D%8F%E8%AE%AE%E6%B5%81)
+
+:::
+
 ### OBS推流
 
 
@@ -40,6 +46,12 @@ ffmpeg -re -stream_loop -1 -i test.mp4 -c:a copy -c:v copy -f flv -flvflags no_d
 ffplay -i rtmp://127.0.0.1:1935/live/test?token=123
 ```
 
+
+:::info 
+
+查看命令详细解释，参考：[播放RTMP协议流](https://www.ycmds.cc/ffmpeg/ffplay/#%E6%92%AD%E6%94%BErtmp%E5%8D%8F%E8%AE%AE%E6%B5%81)
+
+:::
 
 ## 集群
 

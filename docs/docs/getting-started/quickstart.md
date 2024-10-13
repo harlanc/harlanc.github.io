@@ -54,6 +54,12 @@ Use the following command to restart Docker :
 docker restart xiu
 ```
 
+:::info 
+
+Docker-related commands, reference: [Basic Docker Commands](https://www.ycmds.cc/en/docker/#1basic-commands)
+
+:::
+
 ### Install with cargo 
 
 Issue the following command to install xiu:

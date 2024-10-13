@@ -22,6 +22,11 @@ ffmpeg -re -stream_loop -1  -i test.mp4 -c:v copy  -c:a copy  -rtsp_transport tc
 ffmpeg -re -stream_loop -1  -i test.mp4 -c:v copy  -c:a copy -f rtsp "rtsp://127.0.0.1:5544/live/test?token=123"
 ```
 
+:::info 
+
+参考：[转推RTSP协议流](https://www.ycmds.cc/ffmpeg/ffmpeg/#3%E8%BD%AC%E6%8E%A8rtsp%E5%8D%8F%E8%AE%AE%E6%B5%81)
+
+:::
 
 ## 播放
 
@@ -37,6 +42,13 @@ ffplay -rtsp_transport tcp -i "rtsp://127.0.0.1:5544/live/test?token=123"
 ```shell
 ffplay -i "rtsp://127.0.0.1:5544/live/test?token=123"
 ```
+
+:::info 
+
+参考：[播放RTSP协议流](https://www.ycmds.cc/ffmpeg/ffplay/#%E6%92%AD%E6%94%BErtsp%E5%8D%8F%E8%AE%AE%E6%B5%81)
+
+:::
+
 
 ## 拉取远端RTSP摄像头流到xiu
 

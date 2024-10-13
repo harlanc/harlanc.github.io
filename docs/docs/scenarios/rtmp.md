@@ -17,6 +17,12 @@ Use ffmpeg CLI to push a live stream:
 ffmpeg -re -stream_loop -1 -i test.mp4 -c:a copy -c:v copy -f flv -flvflags no_duration_filesize rtmp://127.0.0.1:1935/live/test
 ```
 
+:::info 
+
+View detailed explanations of commands, reference: [Transfer RTMP Protocol Stream](https://www.ycmds.cc/en/ffmpeg/ffmpeg/#1transfer-rtmp-streams)
+
+:::
+
 ### OBS Push
 
 
@@ -39,6 +45,13 @@ Need to cut at app name and stream name, fill them into **Server** and **Bearer 
 ```shell
 ffplay -i rtmp://127.0.0.1:1935/live/test?token=123
 ```
+
+:::info 
+
+View detailed explanations of commands, reference：[Play RTMP Stream](https://www.ycmds.cc/en/ffmpeg/ffplay/#play-rtmp-stream)
+
+:::
+
 
 
 ## Clusters
