@@ -109,7 +109,7 @@ The configuration file for edge node:
 enabled = true
 port = 1936
 [rtmp.pull]
-enabled = false
+enabled = true
 address = "localhost"
 port = 1935
 ```
