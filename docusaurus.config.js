@@ -1,18 +1,6 @@
 const path = require('path')
 const fs = require('fs')
 
-
-//add adsense to see if it can have some money to buy milk for my children. 
-module.exports = {
-  scripts: [
-    {
-      src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7477500401416984',
-      async: true,
-      crossorigin: 'anonymous',
-    },
-  ],
-};
-
 // Change this value to update what the un-versioned docs url should be
 const unreleasedTauriVersion = ''
 var lastestReleasedVersion
