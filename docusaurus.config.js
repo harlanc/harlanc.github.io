@@ -299,7 +299,14 @@ async function siteConfig() {
           ],
         },
       ],
-    ],
+
+      [
+        './plugins/adsense-plugin', // 要引入的插件的目录
+        { 
+          clientID: 'ca-pub-7477500401416984', // 设置参数
+        }
+      ],
+],
 
     webpack: {
       jsLoader: (isServer) => ({
