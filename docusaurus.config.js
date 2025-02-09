@@ -1,7 +1,9 @@
 const path = require('path')
 const fs = require('fs')
 
-export default {
+
+//add adsense to see if it can have some money to buy milk for my children. 
+module.exports = {
   scripts: [
     {
       src: 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7477500401416984',
