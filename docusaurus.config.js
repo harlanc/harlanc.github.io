@@ -104,6 +104,26 @@ const footerLinks = [
       },
     ],
   },
+  {
+    title: 'Other Links',
+    items: [
+      {
+        label: 'TempMail365',
+        href: 'https://temp-mail-365.com',
+        target: '_self',
+      },
+      {
+        label: 'QrOnline',
+        href: 'https://qronline.io',
+        target: '_self',
+      },
+      {
+        label: 'MCPStore',
+        href: 'https://mcpstore.site',
+        target: '_self',
+      },
+    ],
+  },
 ]
 
 async function siteConfig() {
