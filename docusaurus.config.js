@@ -107,11 +107,11 @@ const footerLinks = [
   {
     title: 'Other Links',
     items: [
-      {
-        label: 'TempMail365',
-        href: 'https://temp-mail-365.com',
-        target: '_self',
-      },
+      // {
+      //   label: 'TempMail365',
+      //   href: 'https://temp-mail-365.com',
+      //   target: '_self',
+      // },
       {
         label: 'QrOnline',
         href: 'https://qronline.io',
